@@ -1,0 +1,17 @@
+.form-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 300px;
+}
+.form-container form {width:250px;}
+.form-container form>div>span {
+    width:72px;
+	font-weight:bold;
+	display:inline-block;
+}
+.form-container form input {width:150px;}
+
+.form-container form>div>span {width:100px;display: inline-block;text-align:left;}
+.form-container form>div {text-align:center;}
+table>tr>th, table>tr>td {text-align:right;} 
+

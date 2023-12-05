@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Deducion Salarial</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<script src="deducion_salarial.js"></script>
+<body>
+    <div class="form-container">  
+        <h2 >Deducionde salario</h2>
+        <div class="tooltip">
+            <!-- <i class="material-icons">question_answer</i> -->
+            <span class="tooltiptext">
+                Las deducciones de nómina son aquellas reducciones monetarias 
+                que se aplican al momento de pagarle a un trabajador. 
+                Es decir, son los distintos montos que se descuentan por ley del 
+                salario de los empleados
+            </span>
+        </div>   
+        <br>
+        <form>
+            
+           
+            <div>
+                <span>Salario:</span>
+                <span><input type="text" name="salario" maxlength=9 value=2000000></span>
+
+            </div>
+            <div>
+                <span>Aux transporte :</span>
+                <span><input type="text" name="aux_trans" maxlength=9 value=135919></span>
+            </div>
+            <div>
+                <span>Dias de trabajo :</span>
+                <span><input type="text" name="dias_trabajados" maxlength=3 value=360></span>
+            </div>
+            <div>
+                <p><input type="button" value="Calcular" onclick="GetSalario()" ></p>
+            </div>
+        </form>
+    </div>
+    <div class="col-xd-12 borde_left_tabla">
+        <table id="td-resul-calc">
+            <tbody>
+                <tr>
+                    <td>Aporte Salud:</td>
+                    <td id="aport_salud"></td>
+                </tr>
+                <tr>
+                    <td>Aporte Pension:</td>
+                    <td id="pension"></td>
+                </tr>
+                <tr>
+                    <td>Neto:</td>
+                    <td id="neto"></td>
+                </tr>
+                <tr>
+                    <td>Prima:</td>
+                    <td id="prima"></td>
+                </tr>
+                <tr>
+                    <td>Interese Cesantias:</td>
+                    <td id="int_cesantias"></td>
+                </tr>
+                </tbody>
+        </table>
+
+    </div>
+   
+    <div class="form-container" id="cuanto_presta" style="display: none;">
+        <h2>Calcula cuánto te prestan</h2>
+        <form>
+            <div>
+                <span>cuanto me prestan :</span>
+                <span><input type="text" name="importe" maxlength=9 ></span>
+            </div>
+            <div>
+                <span>Años :</span>
+                <span><input type="text" name="anos" maxlength=2 value=15></span>
+            </div>
+            <div>
+                <span>Interés :</span>
+                <span><input type="text" name="interes" maxlength=9 value=1.9></span>
+            </div>
+            <div>
+                <p><input type="button" value="Calcular" onclick="calcular()"></p>
+            </div>
+        </form>
+        
+    </div>
+    <div class="col-xd-12 borde_left_tabla" id="ver_tabla" style="display: none;">
+        <table id="td-resul-calc">
+            <tbody>
+                <tr>
+                    <td>interes EA:</td>
+                    <td id="interes_ea"></td>
+                </tr>
+                <tr>
+                    <td>Capital inicial:</td>
+                    <td id="capital"></td>
+                </tr>
+                <tr>
+                    <td>Cuota a pagar mensualmente:</td>
+                    <td id="cuota"></td>
+                </tr>
+                <tr>
+                    <td>Pago total de intereses:</td>
+                    <td id="total_interes"></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div id="resultado"></div>
+</body>
+</html>
